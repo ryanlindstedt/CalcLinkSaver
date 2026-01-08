@@ -56,10 +56,12 @@ Copy and paste the following commands into the CloudShell terminal to download t
 curl -O https://raw.githubusercontent.com/ryanlindstedt/CalcLinkSaver/main/lambda_function.py
 curl -O https://raw.githubusercontent.com/ryanlindstedt/CalcLinkSaver/main/deploy_backend_multiuser.py
 curl -O https://raw.githubusercontent.com/ryanlindstedt/CalcLinkSaver/main/add_user.py
-
+```
+```
 # 2. Run the deployment (this creates the API, Lambda, and DynamoDB tables)
 python3 deploy_backend_multiuser.py
-
+```
+```
 # 3. Create your first user to get your API Key and URL
 python3 add_user.py
 ```
