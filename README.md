@@ -18,16 +18,16 @@ The system consists of a frontend user script and an optional backend infrastruc
     - **Amazon DynamoDB**: Utilizes two tables—one for storing estimate data and another for mapping API keys to user identities for secure multi-user access.
 
 ```
-+------------------+      +-------------------+      +--------------+
-|  User's Browser  |----->|  AWS API Gateway  |----->|  AWS Lambda  |
-|  (Tampermonkey)  |      |    (REST API)     |      |   (Python)   |
-+------------------+      +-------------------+      +--------------+
-         |                                                  |
-         |                                                  v
-         |                            +-----------------------------+
-         +--------------------------->|       Amazon DynamoDB       |
-                                      |  (Estimates & Users Table)  |
-                                      +-----------------------------+
+          +------------------+      +-------------------+      +--------------+
+          |  User's Browser  |----->|  AWS API Gateway  |----->|  AWS Lambda  |
+          |  (Tampermonkey)  |      |    (REST API)     |      |   (Python)   |
+          +------------------+      +-------------------+      +--------------+
+                   |                                                  |
+                   |                                                  v
+                   |                            +-----------------------------+
+                   +--------------------------->|       Amazon DynamoDB       |
+                                                |  (Estimates & Users Table)  |
+                                                +-----------------------------+
 ```
 
 
