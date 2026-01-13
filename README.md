@@ -54,7 +54,6 @@ Copy and paste the following commands into the CloudShell terminal to download t
 ```
 # 1. Download the deployment scripts
 curl -O https://raw.githubusercontent.com/ryanlindstedt/CalcLinkSaver/refs/heads/master/deploy_backend_multiuser.py
-curl -O https://raw.githubusercontent.com/ryanlindstedt/CalcLinkSaver/refs/heads/master/lambda_function.py
 curl -O https://raw.githubusercontent.com/ryanlindstedt/CalcLinkSaver/refs/heads/master/add_user.py
 ```
 ```
@@ -73,7 +72,7 @@ Once the scripts finish, take the **API URL** and the **API Key** provided by th
 
 Because the deployment script creates several discrete resources, they must be removed via the AWS Management Console or CLI:
 
-- **API Gateway**: Delete the `CalcLinkSaverMultiUserAPI`.
-- **Lambda**: Delete the `CalcLinkSaverMultiUserFunction`.
-- **DynamoDB**: Delete the `Estimates` and `Users` tables associated with the project.
-- **IAM**: Delete the `CalcLinkSaverLambdaRole` and associated policies.
+- **API Gateway**: Delete the `CalcLinkSaverMultiUserAPI-UNIQUE_SUFFIX`.
+- **Lambda**: Delete the `CalcLinkSaverMultiUserFunction-UNIQUE_SUFFIX`.
+- **DynamoDB**: Delete the `Estimates-UNIQUE_SUFFIX` and `Users-UNIQUE_SUFFIX` tables associated with the project.
+- **IAM**: Delete the `CalcLinkSaverLambdaRole-UNIQUE_SUFFIX` and associated policies.
