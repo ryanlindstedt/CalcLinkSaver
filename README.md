@@ -33,11 +33,11 @@ The system consists of a frontend user script and an optional backend infrastruc
 
 # **Client Installation**
 
-For local only mode, this is all that needs to be done.
-
 1. Install a user script manager such as [Tampermonkey](https://www.tampermonkey.net/) in your browser. 
-2. Install the `CalcLinkSaver.user.js` script.
-3. The tool will be active immediately upon visiting to the [AWS Calculator](https://calculator.aws/).
+2. Install the `CalcLinkSaver.user.js` script by going to:
+   [https://github.com/ryanlindstedt/CalcLinkSaver/raw/refs/heads/master/CalcLinkSaver.user.js](https://github.com/ryanlindstedt/CalcLinkSaver/raw/refs/heads/master/CalcLinkSaver.user.js)
+4. The tool will be active immediately upon visiting to the [AWS Calculator](https://calculator.aws/).
+5. For local only mode install is done, for AWS Backend, continue to AWS Backend Install.
 
 **NOTE:** Some browsers will need additional security permissions. See [Tampermonkey FAQ for Chrome based (including Edge)](https://www.tampermonkey.net/faq.php#Q209).
 
@@ -76,3 +76,4 @@ Because the deployment script creates several discrete resources, they must be r
 - **Lambda**: Delete the `CalcLinkSaverMultiUserFunction-UNIQUE_SUFFIX`.
 - **DynamoDB**: Delete the `Estimates-UNIQUE_SUFFIX` and `Users-UNIQUE_SUFFIX` tables associated with the project.
 - **IAM**: Delete the `CalcLinkSaverLambdaRole-UNIQUE_SUFFIX` and associated policies.
+
